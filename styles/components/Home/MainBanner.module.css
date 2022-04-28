@@ -1,0 +1,45 @@
+.main_banner_container{ 
+  position: relative;
+
+}
+
+.banner_container{
+  
+  background-image: url("https://bslthemes.com/arter/wp-content/uploads/2020/09/bg.jpg");
+  
+}
+
+.image{
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: red;
+  display: grid;
+}
+
+.image img{
+
+}
+.title{
+  font-size: 45px;
+  
+  font-weight: 800;
+
+}
+.subtitle{
+  font-size: 20px;
+  margin-top: 14px;
+}
+.button{
+  background-color: #ffc107;
+  color: #20202a;
+  border-style: none;
+  font-size: 18px;
+  padding: 13px 30px;
+  margin-top: 25px;
+}
+
+.yellow{
+  color: #ffc107;
+}

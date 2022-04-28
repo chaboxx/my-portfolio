@@ -1,0 +1,287 @@
+.side_navbar_container{
+  
+  height: 100vh;
+}
+
+
+.main_foto_container{
+  background: linear-gradient(159deg,rgba(37,37,50,.98) 0%,rgba(35,35,45,.98) 100%);
+  display: grid;
+  justify-items: center;
+  padding: 30px 0 22px 0;
+  height: 30vh;
+}
+
+.image{
+  /* POSICION NATURAL PERO LO DESACOPLA */
+  position: relative;
+
+}
+.image::after{
+  content: "";
+  width: 17px;
+  height: 17px;
+  background-color: #ffc107;
+  /* ABSOLUTO AL PRIMER PADRE QUE TENGA POSITION */
+  position: absolute;
+  top: 67%;
+  right: 1%;
+  border-radius: 50%;
+  transition: 0.4s ease-in-out;
+  transform: scale(1);
+}
+
+.image img{
+  border-radius: 50%;
+}
+
+
+.name{
+  color: #fafafc;
+  margin-bottom: 0;
+  margin-top: 8px;
+  font-size: 15px;
+}
+
+.title{
+  color: #8c8c8e;
+  margin-bottom: 0;
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.subtitle{
+  color: #8c8c8e;
+  margin-top: 4px;
+  font-size: 14px;
+}
+
+.information_container{
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  background-color: #20202a;
+  overflow-y: scroll;
+  height: 64vh;
+  scrollbar-width: none;
+
+}
+
+
+.general_info_container{
+  width: 85%;
+  border-bottom: 1px solid #404048;
+  padding: 0 10px 4px 10px;
+}
+
+.general_info_list{
+  list-style: none;
+  padding: 0;
+
+}
+
+.list_general_info_item{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 7px;
+}
+.label_info{
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.value_info{
+  color: #8c8c8e;
+  justify-self: end;
+  font-size: 14px;
+  font-weight: 450;
+}
+
+
+.languages_container{
+  width: 85%;
+  border-bottom: 1px solid #404048;
+  padding: 0 10px;
+}
+
+.languages_title{
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.languages_description{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+  padding: 5px 7px;
+  margin-bottom: 20px;
+}
+
+.language{
+  display: grid;
+  justify-items: center;
+}
+
+.canva_language{
+  border: 3px solid #ffc107;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-content: center;
+}
+
+.canva_language p{
+  color: white;
+  padding: 0;
+  margin: 0;
+  font-size: 13px;
+}
+
+.canva_label{
+  font-size: 14px;
+  color: white;
+  margin-top: 15px;
+  font-weight: 400;
+}
+
+.coding_container{
+  width: 85%;
+  border-bottom: 1px solid #404048;
+  padding: 15px 10px;
+
+}
+
+.coding_title{
+  color: white;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.skills_container{
+  margin-top: 20px;
+}
+
+.skills_list{
+  margin: 0;
+  padding: 0;
+}
+
+.skill_list_item{
+  list-style: none;
+  margin-bottom: 20px;
+}
+
+.skill{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 8px;
+  align-items: center;
+
+}
+
+.skill_bar{
+  width: 100%;
+  background-color: #ffc107;
+  height: 3px;
+}
+
+.skill_label{
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.skill_value{
+  color: #c3c3c7;
+  justify-self: end;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+
+.knowledge_container{
+  width: 85%;
+  border-bottom: 1px solid #404048;
+  padding: 20px 10px 12px 10px;
+}
+
+.knowledge_title{
+  font-size: 16px;
+  color: white;
+  font-weight: 600;
+}
+
+.knowledge_list{
+  list-style: none;
+  padding: 0;
+  margin-top: 12px;
+  margin-bottom: 0;
+}
+
+.knowledge_item{
+  display: grid;
+  grid-template-columns: 15px 1fr;
+  gap: 7px;
+  align-items: center;
+  margin-bottom: 7px;
+}
+
+.check_icon{
+  color: #ffc107;
+  width: 10px;
+  height: 10px;
+}
+
+.knowledge_value{
+  color: #8c8c8e;
+  font-size: 14px;
+}
+
+.download_cv_container{
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  width: 85%;
+  padding: 20px 0;
+  gap: 10px;
+  align-items: center;
+}
+
+.download_cv_container h6{
+  color: #8c8c8e;
+}
+
+.download_cv_container svg {
+  color: #8c8c8e;
+  width: 10px;
+  height: 10px;
+}
+
+
+.footer{
+  display: grid;
+  background-color: #242430;
+  justify-items: center;
+  align-items: center;
+  padding: 15px 0 10px 0;
+  height: 6vh;
+}
+
+.footer ul{
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 15px;
+  margin: 0;
+}
+
+.footer_icon{
+  width: 17px;
+  height: 17px;
+  color: #8c8c8e;
+}
