@@ -1,0 +1,35 @@
+
+.menu_movil_main_container{
+  width: 100vw;
+  height: 60px;
+  display: grid;
+  justify-items: end;
+  padding: 0 25px;
+  background-color: #20202a;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  z-index: 19;
+
+}
+
+
+.icon_container{
+  justify-self: end;
+  
+}
+
+.icon_container svg{
+  color: white;
+  width: 35px;
+  height: 35px;
+}
+
+@media screen and ( min-width : 1050px) {
+  
+  .menu_movil_main_container{
+    display: none;
+  }
+}

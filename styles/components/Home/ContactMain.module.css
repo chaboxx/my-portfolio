@@ -1,0 +1,87 @@
+.contact_container{
+
+  margin-top: 30px;
+
+}
+
+.title{
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.main_content{
+  background-color: #2d2d3a;
+  padding: 32px;
+  margin-top: 30px;
+}
+
+
+.content_item{
+  display: grid;
+  grid-template-columns: 60px 1fr;  
+  grid-template-rows: 55px;
+  margin-bottom: 25px;
+}
+.content_item_text_area{
+  display: grid;
+  grid-template-columns: 60px 1fr;  
+  grid-template-rows: 140px;
+  margin-bottom: 25px;
+
+}
+
+.icon_container{
+  background-color: #20202a;
+  display: grid;
+  place-content: center;
+
+}
+
+
+.icon_container svg{
+  color: white;
+}
+
+.icon_container_selected{
+  background-color: #ffc107;
+  display: grid;
+  place-content: center;
+}
+
+.icon_container_selected svg{
+  color: black;
+}
+.input{
+  
+  padding: 10px;
+  background-color: #242430;
+  color: #5c5c63;
+  border: none;
+  font-size: 16px;
+}
+.textarea{
+
+  margin: 0;
+  background-color: #242430;
+
+  padding: 10px;
+  
+  color: #5c5c63;
+  border: none;
+  font-size: 17px;
+}
+
+
+.button{
+  background-color: #ffc107;
+  width: 22%;
+  padding: 15px 0;
+  color: #20202a;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.input:focus,.textarea:focus{
+  outline: none;
+}

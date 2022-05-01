@@ -1,45 +1,84 @@
 .main_banner_container{ 
   position: relative;
-
+  z-index: 9;
+  padding-bottom:20px;
+  padding-top: 10px;
 }
 
 .banner_container{
   
-  background-image: url("https://bslthemes.com/arter/wp-content/uploads/2020/09/bg.jpg");
-  
-}
+  padding: 45px;
 
+}
+.banner_container::before{
+  content: "";
+  display: grid;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("https://bslthemes.com/arter/wp-content/uploads/2020/09/bg.jpg");
+  background-size: cover;
+  z-index: -9;
+  opacity: 0.2;
+}
 .image{
 
   position: absolute;
-  right: 0;
+  right: 80px;
   bottom: 0;
-  background-color: red;
   display: grid;
 }
 
-.image img{
-
-}
 .title{
   font-size: 45px;
   
   font-weight: 800;
 
 }
-.subtitle{
-  font-size: 20px;
-  margin-top: 14px;
+.subtitle_container{
+  margin-top: 17px;
+
 }
+
+.subtitle{
+  color: white;
+  font-family: monospace;
+  display: flex;
+  flex-direction: row;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+  font-size: 15px;
+}
+
 .button{
   background-color: #ffc107;
   color: #20202a;
   border-style: none;
-  font-size: 18px;
-  padding: 13px 30px;
+  font-size: 12px;
+  padding: 15px 30px;
   margin-top: 25px;
+  letter-spacing: 1.5px;
+
+  font-weight: 600;
 }
 
 .yellow{
   color: #ffc107;
+
+}
+
+.maquina_escribir{
+  margin-left: 1ch;
+  margin-right: 1ch;
+  white-space: nowrap;
+  border-right: 1px solid;
+  width: 20ch;
+  animation: typing 3s steps(20) infinite;
+  overflow: hidden;
+}
+
+@keyframes typing {
+  from { width: 0; }
 }

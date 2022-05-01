@@ -1,6 +1,14 @@
+import React, { FC, useState } from 'react'
 import Head from 'next/head';
-import React, { FC } from 'react'
+import { MenuMovilMain } from '../components/ui/MenuMovilMain';
 import { SideNavBar } from '../components/ui/SideNavBar';
+
+import { Modal } from '../components/ui/Modal';
+
+import styles from "../styles/layouts/Layout.module.css";
+
+import { useModal } from '../hooks/useModal';
+
 
 interface Props {
   children : JSX.Element | JSX.Element[];
@@ -8,7 +16,11 @@ interface Props {
   description? : string;
 }
 
+
 export const Layout :FC<Props> = ({children , title , description}) => {
+ 
+  const { isOpen,toggleOpen } = useModal();
+
   return (
     <>
       <Head>
@@ -17,21 +29,21 @@ export const Layout :FC<Props> = ({children , title , description}) => {
         <meta name='description' content={description || "Portfolio Rodrigo Cueva Pastor Full Stack Developer"} />
       </Head>
 
-      
-      <div style={{
-        width:"100%",
-        padding:"0 4vw",
-        backgroundColor:"#191923",
-        display:"grid",
-        gridTemplateColumns:"20% 1fr",
-      }}>
-        <SideNavBar/>
+      <div onClick={()=>toggleOpen()} className={styles.layout_container}>
 
-        <main>
-          { children }
-        </main>
-      </div>  
-      
+        <div className={styles.content_container}>
+          <SideNavBar isOpen={isOpen}/>
+          <MenuMovilMain mostrarSideBarMovil={toggleOpen} />
+          <Modal isOpen={isOpen} toggleOpen={toggleOpen}>
+
+            <SideNavBar isOpen={isOpen}/>
+          </Modal>
+          <main className={styles.main_container}>
+            { children }
+          </main>
+        
+        </div>
+      </div>
     </>
   )
 }

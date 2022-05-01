@@ -1,0 +1,35 @@
+.layout_container{
+  background-color: #191923;
+  display: grid;
+  justify-items: center;
+
+}
+
+.content_container{
+
+  display: grid;
+  justify-items: center;
+  max-width: 1800px;
+  margin: 0 auto;
+}
+
+.main_container{
+  margin-left: 400px;
+  padding: 40px 0 5px 0;
+  max-width: 1400px;
+}
+
+@media screen and ( max-width: 1050px) {
+  .main_container{
+    margin: 50px 0;
+    display: none;
+  }
+
+}
+.mostrar{
+  display: grid;
+}
+/*--------*/
+.no_mostrar{
+  display: none;
+}
