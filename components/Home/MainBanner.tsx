@@ -5,7 +5,7 @@ import Image from "next/image";
 import styles from "../../styles/components/Home/MainBanner.module.css";
 
 
-const textosBanner = ["web interfaces.","ios and android applications.","design mockups."]
+const textosBanner = ["web1","web","design"]
 export const MainBanner : FC = () => {
 
   const [textoBanner, setTextoBanner] = useState(textosBanner[0]);

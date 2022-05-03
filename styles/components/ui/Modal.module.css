@@ -1,20 +1,22 @@
-.mostrar{
-  display: grid;
-}
+
 .no_mostrar{
   display: none;
+}
+.mostrar{
+  display: grid;
 }
 .modal_container{
   position: fixed;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-  display: grid;
+  background-color: rgba(0, 0, 0, 0.6);
+  
   justify-items: start;
   align-items: start;
   z-index: 99;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+
 }
 .modal_content{
   width: 100%;

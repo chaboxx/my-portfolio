@@ -1,4 +1,4 @@
-import React, { FC, useState } from 'react'
+import React, { FC , useLayoutEffect, useState } from 'react'
 import Head from 'next/head';
 import { MenuMovilMain } from '../components/ui/MenuMovilMain';
 import { SideNavBar } from '../components/ui/SideNavBar';
@@ -20,7 +20,14 @@ interface Props {
 export const Layout :FC<Props> = ({children , title , description}) => {
  
   const { isOpen,toggleOpen } = useModal();
+  const [width, setWidth] = useState< number | null >(null);
+  useLayoutEffect(() => {
+    if (typeof window !== "undefined") {
 
+      setWidth(window.innerWidth)
+    }
+  }, [])
+  
   return (
     <>
       <Head>
@@ -29,10 +36,11 @@ export const Layout :FC<Props> = ({children , title , description}) => {
         <meta name='description' content={description || "Portfolio Rodrigo Cueva Pastor Full Stack Developer"} />
       </Head>
 
-      <div onClick={()=>toggleOpen()} className={styles.layout_container}>
+      <div className={styles.layout_container}>
 
         <div className={styles.content_container}>
-          <SideNavBar isOpen={isOpen}/>
+          <SideNavBar isOpen={ width! > 1050 ? true : false }/>
+          
           <MenuMovilMain mostrarSideBarMovil={toggleOpen} />
           <Modal isOpen={isOpen} toggleOpen={toggleOpen}>
 

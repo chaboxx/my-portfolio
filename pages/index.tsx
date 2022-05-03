@@ -3,7 +3,6 @@ import type { NextPage } from 'next';
 
 import { Layout } from '../layouts/Layout';
 
-import { MenuMovilMain } from '../components/ui/MenuMovilMain';
 import { MainBanner } from '../components/Home/MainBanner';
 import { SkillsMain } from '../components/Home/SkillsMain';
 import { HistoryMain } from '../components/Home/HistoryMain';

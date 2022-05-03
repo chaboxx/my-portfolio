@@ -31,3 +31,52 @@
   color: #ffffff;
   font-weight: 600;
 }
+
+@media screen and ( max-width: 1050px ) {
+  .home_container{
+    padding: 0 20px;
+  
+  }
+  .info_project_container{
+
+    gap: 14px;
+
+  }
+  .info_project_value{
+    font-size: 20px;
+
+  
+  }
+  
+  .info_project_label{
+    font-size: 14px;
+
+  }
+}
+
+@media screen and ( max-width: 768px ) {
+  .home_container{
+    padding: 0 10px;
+  
+  }
+  .info_project_container{
+  
+    gap: 10px;
+
+  }
+  .info_project_value{
+    font-size: 18px;
+
+  }
+  
+  .info_project_label{
+    font-size: 13px;
+
+  }
+  .home_info_projects_container{
+    grid-template-columns: 1fr 1fr;
+    gap: 15px 0;
+  }
+}
+
+

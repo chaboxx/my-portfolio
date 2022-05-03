@@ -21,3 +21,26 @@
   font-size: 15px;
   font-weight: 600;
 }
+
+@media screen  and ( max-width: 768px ){
+  .footer{
+    margin-bottom: 0;
+  }
+  
+}
+
+@media screen  and ( max-width: 578px ){
+  .footer{
+    grid-template-columns: 1fr;
+    grid-area: 5px;
+  }
+  
+  .year{
+    justify-self: center;
+    
+  }
+  .email{
+    justify-self: center;
+    
+  }
+}

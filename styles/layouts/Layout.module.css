@@ -2,10 +2,10 @@
   background-color: #191923;
   display: grid;
   justify-items: center;
-
 }
 
 .content_container{
+  background-color: #191923;
 
   display: grid;
   justify-items: center;
@@ -17,12 +17,14 @@
   margin-left: 400px;
   padding: 40px 0 5px 0;
   max-width: 1400px;
+  background-color: #191923;
+
 }
 
 @media screen and ( max-width: 1050px) {
   .main_container{
-    margin: 50px 0;
-    display: none;
+    margin: 0;
+    padding: 40px 10px 5px 10px;
   }
 
 }
