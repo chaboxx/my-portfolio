@@ -10,7 +10,7 @@
 .content_container{
   margin-top: 20px;
   display: grid;
-  grid-template-columns: repeat(2,1fr);
+  grid-template-columns: repeat(3,1fr);
   gap: 25px 30px;
 }
 
@@ -21,6 +21,7 @@
 
 .image_container{
   background-color: #666666;
+  width: 100%;
 }
 
 
@@ -84,7 +85,12 @@
 
 
 @media screen and ( max-width: 1050px ){
- 
+  .content_container{
+   
+    grid-template-columns: repeat(2,1fr);
+
+  }
+  
 
 } 
 

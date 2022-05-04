@@ -1,6 +1,8 @@
-import { FC } from 'react';
+import React, { FC , useState } from 'react';
 
 import Image from "next/image";
+
+import { nanoid } from "nanoid";
 
 import { BsCheckLg } from "react-icons/bs";
 import { FaDownload } from "react-icons/fa";
@@ -8,11 +10,116 @@ import { AiFillLinkedin ,AiOutlineGithub ,AiOutlineTwitter} from "react-icons/ai
 
 import styles from "../../styles/components/ui/SideNavBar.module.css";
 
+
 interface Props {
   isOpen : boolean;
 
 }
+
+const lenguajes = [
+  {
+    nombre: "English",
+    value : 0.750,
+  },
+  {
+    nombre: "Spanish",
+    value : 1,
+  },
+
+]
+  
+const coding = [
+  {
+    id : nanoid(8),
+    nombre: "html",
+    value : 0.90, 
+  },
+  {
+    id : nanoid(8),
+    nombre: "CSS",
+    value : 0.25, 
+  },
+  {
+    id : nanoid(8),
+    nombre: "JS",
+    value : 0.90, 
+  },
+  {
+    id : nanoid(8),
+    nombre: "PHP",
+    value : 0.65, 
+  },
+  {
+    id : nanoid(8),
+    nombre: "WordPress",
+    value : 0.85, 
+  },
+  
+  
+]
+
 export const SideNavBar : FC<Props> = ({isOpen}) => {
+
+  // const circleSkillsPoints : React.LegacyRef<SVGCircleElement> = useRef(null);
+  const [languageRefs, setLanguageRefs] = useState<SVGCircleElement[]>([]);
+  const [codingSkillsRef , setcodingSkillsRef ] = useState<HTMLDivElement[]>([]);
+  // useEffect(() => {
+  //   console.log(circleSkillsPoints);
+  //   // confia que te enviare todo lo de atras y pa adelante (!) 
+  //   // despues no es necesario porque puede ser undefined
+
+  //   // circleSkillsPoints.current!.style.strokeDasharray = "100";
+    
+    
+  // }, [])
+
+  const captureLanguageRefs = ( ref : SVGCircleElement | null , value : number) =>{
+    //TENER EN CUENTA EL VALOR DEL RADIO DEL ELEMENTO CIRCLE PARA HACER ESTE DIBUJO 
+    // DIAMETRO CIRCLE = 138px
+    
+    if( !languageRefs.includes( ref! ) && ref ){
+
+      setLanguageRefs([...languageRefs ,ref!])
+      
+      ref.style.strokeDasharray = `${138 - 138 * (1- value) }px 138px`
+      
+    }
+    
+  }
+
+  const captureCodingRefs = ( ref : HTMLDivElement | null , value : number) =>{
+    //TENER EN CUENTA EL VALOR DEL RADIO DEL ELEMENTO CIRCLE PARA HACER ESTE DIBUJO 
+    // DIAMETRO CIRCLE = 138px
+    
+    if( !codingSkillsRef.includes( ref! ) && ref ){
+
+      setcodingSkillsRef([...codingSkillsRef ,ref!])
+      const childs : HTMLCollection = ref.children;
+      const child : any  = childs[1];
+      child.style.width = `${value*100}%`;
+      
+    }
+    
+  }
+  
+  const onMouseHandleHoverDownloadDiv = ( e : React.MouseEvent<HTMLDivElement, MouseEvent> ) => {
+   
+    const target  = e.currentTarget;
+    //--------------------
+    const label =  target.children[0] as HTMLElement;
+    const icon   = target.children[1] as HTMLElement;
+
+    if (e.type ==="mouseenter"){
+      label!.style.color = "white";
+      icon!.style.color = "white";
+
+    }else{
+      label!.style.color = "#8c8c8e";
+      icon!.style.color = "#8c8c8e";
+    }
+
+  }
+
   return (
     <aside className={[styles.side_navbar_container , isOpen ? styles.mostrar : styles.no_mostrar].join(" ")}>
       <div className={styles.content_container}>
@@ -50,24 +157,29 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
           <div className={styles.languages_container}>
             <h6 className={styles.languages_title}>Languages</h6>
             <div className={styles.languages_description}>
-              <div className={styles.language}>
-                <div className={styles.canva_language}>
-                  <p>100%</p>
-                </div>
-                <h6 className={styles.canva_label}>French</h6>
-              </div>
-              <div className={styles.language}>
-                <div className={styles.canva_language}>
-                  <p>90%</p>
-                </div>
-                <h6 className={styles.canva_label}>English</h6>
-              </div>
-              <div className={styles.language}>
-                <div className={styles.canva_language}>
-                  <p>70%</p>
-                </div>
-                <h6 className={styles.canva_label}>Spanish</h6>
-              </div>
+              
+              {
+                lenguajes.map((lenguaje,index)=>(
+                  <div className={styles.language}>
+                    <div className={styles.canva_language}>
+                      <svg className={styles.svg_circle} xmlns="http://www.w3.org/2000/svg" version="1.1" width="50px" height="50px">
+                        <defs>
+                            <linearGradient id="GradientColor">
+                              <stop offset="0%" stop-color="#ffc107" />
+                              <stop offset="100%" stop-color="#ffc107" />
+                              
+                            </linearGradient>
+                        </defs>
+                        <circle ref={(ref)=>captureLanguageRefs(ref,lenguaje.value)} className={styles.circle_points} cx="50%" cy="50%" r="22px" stroke-linecap="round" />
+                      </svg>
+                      <p>{`${(lenguaje.value*100)}%`}</p>
+                    </div>
+                    <h6 className={styles.canva_label}>{lenguaje.nombre}</h6>
+                  </div>
+
+                ))
+              }
+              
             </div>
           </div>
 
@@ -75,45 +187,22 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
             <h6 className={styles.coding_title}>Coding</h6>
             <div className={styles.skills_container}>
               <ul className={styles.skills_list}>
-                <li className={styles.skill_list_item}>
-                  <div className={styles.skill}>
-                    <p className={styles.skill_label}>html</p>
-                    <p className={styles.skill_value}>90 %</p>
-                  </div>
-                  <div className={styles.skill_bar}></div>
-                </li>
+                {
+                  coding.map(skill=>(
+                    <li key={skill.id} className={styles.skill_list_item}>
+                      <div className={styles.skill}>
+                        <p className={styles.skill_label}>{skill.nombre}</p>
+                        <p className={styles.skill_value}>{`${skill.value*100} %`}</p>
+                      </div>
+                      <div ref={(ref)=>captureCodingRefs(ref,skill.value)} className={styles.skill_bar}>
+                        <div className={styles.bar_before}></div>
+                        <div className={styles.bar_after}></div>
+                      </div>
+                    </li>
+
+                  ))
+                }
                 
-                <li className={styles.skill_list_item}>
-                  <div className={styles.skill}>
-                    <p className={styles.skill_label}>CSS</p>
-                    <p className={styles.skill_value}>95 %</p>
-                  </div>
-                  <div className={styles.skill_bar}></div>
-                </li>
-                
-                <li className={styles.skill_list_item}>
-                  <div className={styles.skill}>
-                    <p className={styles.skill_label}>JS</p>
-                    <p className={styles.skill_value}>75 %</p>
-                  </div>
-                  <div className={styles.skill_bar}></div>
-                </li>
-                
-                <li className={styles.skill_list_item}>
-                  <div className={styles.skill}>
-                    <p className={styles.skill_label}>PHP</p>
-                    <p className={styles.skill_value}>65 %</p>
-                  </div>
-                  <div className={styles.skill_bar}></div>
-                </li>
-                
-                <li className={styles.skill_list_item}>
-                  <div className={styles.skill}>
-                    <p className={styles.skill_label}>WordPress</p>
-                    <p className={styles.skill_value}>85 %</p>
-                  </div>
-                  <div className={styles.skill_bar}></div>
-                </li>
 
               </ul>
             </div>
@@ -142,9 +231,9 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
             </ul>
           </div>
 
-          <div className={styles.download_cv_container}>
-            <h6>DOWNLOAD CV </h6>
-            <FaDownload/>
+          <div className={styles.download_cv_container} onMouseLeave={onMouseHandleHoverDownloadDiv} onMouseEnter={onMouseHandleHoverDownloadDiv} onClick={(e)=>window.open(`${process.env.NEXT_PUBLIC_URL}/rodrigocp_cv.pdf`)}>
+            <h6 className={styles.download_label}>DOWNLOAD CV </h6>
+            <FaDownload className={styles.download_icon}/>
           </div>
         </div>
         <div className={styles.footer}>

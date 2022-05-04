@@ -1,4 +1,4 @@
-import React, { FC } from 'react'
+import React, { FC } from 'react';
 import Image from 'next/image';
 
 import { IconType } from 'react-icons';
@@ -6,7 +6,7 @@ import { IconType } from 'react-icons';
 import { IoLogoJavascript } from "react-icons/io";
 
 import { GoMarkGithub } from "react-icons/go";
-import { BsLink45Deg } from "react-icons/bs";
+
 import { BiLinkExternal } from "react-icons/bi";
 
 import styles from "../../styles/components/Home/ProyectsMain.module.css";
@@ -63,7 +63,7 @@ export const ProyectsMain : FC = () => {
           proyectos.map(data=>(
             <div className={styles.content_item}>
               <div className={styles.image_container}>
-                <Image src={data.image} width="450px" height="200px"/>
+                <Image src={data.image} width="100%" height="100%"/>
               </div>
 
               <div className={styles.data_container}>
