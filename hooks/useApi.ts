@@ -15,7 +15,10 @@ export const useApi = ( endpoint : string) =>{
     
     const resp  = await fetch(`${baseUrl}${endpoint}`,{
       method  : "POST",
-      body: JSON.stringify(data)
+      body: JSON.stringify(data),
+      headers:{
+        "Access-Control-Allow-Origin": "*"
+      }
     })
 
   
