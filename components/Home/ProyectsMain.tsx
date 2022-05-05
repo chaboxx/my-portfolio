@@ -90,7 +90,7 @@ export const ProyectsMain : FC = () => {
     <div className={styles.proyects_main_container}>
       <Modal isOpen={isOpen} toggleOpen={toggleOpen} position="center"> 
         
-        <Image src={currentImageModal} width={`${currentWidth > 760 ? currentWidth*0.6 : currentWidth*0.9}px`} height={`${currentWidth >760 ? currentWidth*0.4 : currentWidth * 0.8}px`} layout="fixed"/>
+        <Image quality={100} src={currentImageModal} width={`${currentWidth > 760 ? currentWidth*0.6 : currentWidth*0.9}px`} height={`${currentWidth >760 ? currentWidth*0.4 : currentWidth * 0.8}px`} layout="fixed"/>
 
         
       </Modal>
@@ -100,7 +100,7 @@ export const ProyectsMain : FC = () => {
           proyectos.map(data=>(
             <div key={data.id} className={styles.content_item}>
               <div onClick={(e)=>openModalImage(e,data.image)} className={styles.image_container}>
-                <Image layout="responsive" src={data.image} width="100%" height="100%"/>
+                <Image quality={100} layout="responsive" src={data.image} width="100%" height="100%"/>
               </div>
 
               <div className={styles.data_container}>

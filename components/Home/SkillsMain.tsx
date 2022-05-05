@@ -122,7 +122,7 @@ export const SkillsMain : FC = () => {
         {
           skills.map(data=>(
             <div key={data.id} className={styles.skill_item}>
-              <Image onClick={()=>window.open(data.tecnology_link)} className={styles.image} src={data.image} width="100%" height="100%"/>
+              <Image quality={100} onClick={()=>window.open(data.tecnology_link)} className={styles.image} src={data.image} width="100%" height="100%"/>
               <h5 className={styles.skill_title}>{data.skill}</h5>
               <p className={styles.skill_description}>{data.description}</p>
             </div>
