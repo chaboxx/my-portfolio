@@ -17,7 +17,8 @@ export const useApi = ( endpoint : string) =>{
       method  : "POST",
       body: JSON.stringify(data),
       headers:{
-        "Access-Control-Allow-Origin": "*"
+        "Access-Control-Allow-Origin": "*",
+        "Accept" : "*/*",
       }
     })
 
