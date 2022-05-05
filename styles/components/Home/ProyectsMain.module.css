@@ -22,6 +22,7 @@
 .image_container{
   background-color: #666666;
   width: 100%;
+  cursor: pointer;
 
 }
 

@@ -42,7 +42,7 @@ export const Layout :FC<Props> = ({children , title , description}) => {
           <SideNavBar isOpen={ width! > 1050 ? true : false }/>
           
           <MenuMovilMain mostrarSideBarMovil={toggleOpen} />
-          <Modal isOpen={isOpen} toggleOpen={toggleOpen}>
+          <Modal isOpen={isOpen} toggleOpen={toggleOpen} position="top_left">
 
             <SideNavBar isOpen={isOpen}/>
           </Modal>

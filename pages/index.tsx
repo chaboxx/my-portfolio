@@ -23,23 +23,23 @@ const Home: NextPage = () => {
         <MainBanner/>
         <div className={styles.home_info_projects_container}>
           <div className={styles.info_project_container}>
-            <p className={styles.info_project_value}>10 +</p>
+            <p className={styles.info_project_value}>2 +</p>
             <p className={styles.info_project_label}>Years Experience</p>
           </div>
           
           <div className={styles.info_project_container}>
-            <p className={styles.info_project_value}>143</p>
+            <p className={styles.info_project_value}>2 +</p>
             <p className={styles.info_project_label}>Completed Projects</p>
           </div>
           
           <div className={styles.info_project_container}>
-            <p className={styles.info_project_value}>114</p>
-            <p className={styles.info_project_label}>Happy Customers</p>
+            <p className={styles.info_project_value}>2</p>
+            <p className={styles.info_project_label}>Company Reference</p>
           </div>
           
           <div className={styles.info_project_container}>
-            <p className={styles.info_project_value}>20 +</p>
-            <p className={styles.info_project_label}>Honors and Awards</p>
+            <p className={styles.info_project_value}>3 +</p>
+            <p className={styles.info_project_label}>Cerfificate</p>
           </div>
         </div>
         <SkillsMain />

@@ -19,10 +19,11 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-image: url("https://bslthemes.com/arter/wp-content/uploads/2020/09/bg.jpg");
+  background-image: url("http://localhost:3000/js_banner.png");
   background-size: cover;
+  background-position: center;
   z-index: -9;
-  opacity: 0.2;
+  opacity: 0.25;
 }
 .image{
 
@@ -43,15 +44,6 @@
 
 }
 
-.subtitle{
-  color: white;
-  font-family: monospace;
-  display: flex;
-  flex-direction: row;
-  word-spacing: 2px;
-  letter-spacing: 1.5px;
-  font-size: 18px;
-}
 
 .button{
   background-color: #ffc107;
@@ -61,23 +53,33 @@
   padding: 15px 30px;
   margin-top: 25px;
   letter-spacing: 1.5px;
-
+  
   font-weight: 600;
 }
 
 .yellow{
   color: #ffc107;
-
+  
+}
+.subtitle{
+  color: white;
+  font-family: monospace;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  overflow: auto;
+  max-width: 60ch;
+  word-spacing: 2px;
+  letter-spacing: 1.5px;
+  font-size: 18px;
 }
 
 .maquina_escribir{
-  margin-left: 1ch;
-  margin-right: 1ch;
   white-space: nowrap;
   border-right: 1px solid;
-  width: 10ch;
-  animation: typing 3s steps(20) infinite;
+  width: 20ch;
+  animation: typing 2s steps(20) infinite;
   overflow: hidden;
+
 }
 
 @keyframes typing {
@@ -91,10 +93,14 @@
   .banner_container{
     padding: 35px;
   }
+  .main_banner_container{
+    margin-top: 30px;
+  }
 }
 
 
 @media screen and ( max-width: 768px){
+  
   .banner_container{
     padding: 25px;
   }
@@ -106,6 +112,16 @@
   .subtitle_container{
     max-width: 80vw;
     white-space: pre;
+  }
+  .title{
+    font-size: 30px;
+    
+    font-weight: 800;
+  
+  }
+  .subtitle{
+    
+    grid-template-columns: 1fr;
   }
 }
 

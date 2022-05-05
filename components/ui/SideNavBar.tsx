@@ -238,13 +238,13 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
         </div>
         <div className={styles.footer}>
           <ul>
-            <li>
+            <li onClick={()=>window.open("https://www.linkedin.com/in/rodrigocuevapastor/")}>
               <AiFillLinkedin className={styles.footer_icon}/>
             </li>
-            <li>
+            <li onClick={()=>window.open("https://github.com/chaboxx")}>
               <AiOutlineGithub className={styles.footer_icon}/>
             </li>
-            <li>
+            <li onClick={()=>window.open("https://twitter.com/chaboxxSama")}>
               <AiOutlineTwitter className={styles.footer_icon}/>
             </li>
           </ul>

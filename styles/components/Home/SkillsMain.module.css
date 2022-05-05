@@ -23,7 +23,7 @@
 }
 
 .image{
-
+  cursor: pointer;
 }
 
 .skill_title{
@@ -38,6 +38,7 @@
   color: #8c8c8e;
   line-height: 1.6;
   font-size: 14px;
+  justify-self: start;
 }
 
 

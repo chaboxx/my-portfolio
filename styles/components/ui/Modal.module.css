@@ -10,14 +10,39 @@
   top: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.6);
+
   
-  justify-items: start;
-  align-items: start;
   z-index: 99;
   height: 100%;
   width: 100%;
 
 }
+
+.center{
+  justify-items: center;
+  align-items: center;
+}
+.top_left{
+  justify-items: start;
+  align-items: start;
+}
+
+.top_right{
+  justify-items: end;
+  align-items: start;
+}
+
+.bottom_left{
+  justify-items: start;
+  align-items: end;
+}
+
+.bottom_right{
+  justify-items: end;
+  align-items: end;
+}
+
+
 .modal_content{
-  width: 100%;
+  width: auto;
 }
