@@ -6,14 +6,14 @@ import { DataMessage, SendMessageResponse } from "../interfaces/send-message-res
 
 
 
-const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
+// const baseUrl = process.env.NEXT_PUBLIC_BASE_URL;
 
 export const useApi = ( endpoint : string) =>{
 
 
   const sendMessage = async ( data : DataMessage  ) =>{
     
-    const resp  = await fetch(`${baseUrl}${endpoint}`,{
+    const resp  = await fetch(`/api${endpoint}`,{
       method  : "POST",
       body: JSON.stringify(data),
       headers:{
