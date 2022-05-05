@@ -22,7 +22,7 @@ const proyectos = [
   {
     id: nanoid(8),
     title:"HI BABY ECOMMERCE",
-    image: "/../public/HI-BABY.PNG",
+    image: "/HI-BABY.jpg",
     description: "With only me in the development team was my firts experience , this webpage was created in the MERN stack.",
     githubLink : "https://github.com/chaboxx/hibabyServidor",
     link : "https://hi-baby-store.com",
@@ -31,7 +31,7 @@ const proyectos = [
   {
     id: nanoid(8),
     title:"Rappidin",
-    image: "/../public/rappidin.PNG",
+    image: "/rappidin.jpg",
     description: "Working in this project... Food App , PWA , Delivery and Maps.",
     githubLink : "https://github.com/chaboxx/Rappidin",
     link : "",
@@ -40,7 +40,7 @@ const proyectos = [
   {
     id: nanoid(8),
     title:"Clean-Data TIC",
-    image: "/../public/tic_clean_data.PNG",
+    image: "/tic_clean_data.jpg",
     description: "App for clean a archive .csv.",
     githubLink : "https://github.com/chaboxx/T1C-CLEAN-DATA",
     link : "https://t1c-ticx-clean-data.herokuapp.com/",
@@ -49,7 +49,7 @@ const proyectos = [
   {
     id: nanoid(8),
     title:"My Portfolio",
-    image: "/../public/my-portfolio.PNG",
+    image: "/my-portfolio.jpg",
     description: "My portfolio :).",
     githubLink : "https://github.com/chaboxx/my-portfolio",
     link : "",

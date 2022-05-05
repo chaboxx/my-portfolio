@@ -50,7 +50,7 @@ export const MainBanner : FC = () => {
       </div>
       <div className={styles.image}>
 
-        <Image src="/../public/miFotoSinFondo.png" width="280px" height="390px"/>
+        <Image src="/miFotoSinFondo.png" width="280px" height="390px"/>
       </div>
     </div>
   )

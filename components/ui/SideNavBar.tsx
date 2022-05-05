@@ -138,7 +138,7 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
 
         <div className={styles.main_foto_container}>
           <div className={styles.image}>
-            <Image src="/../public/miFoto1_1.jpg" width="90px" height="90px"/>
+            <Image src="/miFoto1_1.jpg" width="90px" height="90px"/>
             
           </div>
           <h3 className={styles.name}>Rodrigo Cueva Pastor</h3>
@@ -177,8 +177,8 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
                       <svg className={styles.svg_circle} xmlns="http://www.w3.org/2000/svg" version="1.1" width="50px" height="50px">
                         <defs>
                             <linearGradient id="GradientColor">
-                              <stop offset="0%" stopColor="ffc107" />
-                              <stop offset="100%" stopColor="ffc107" />
+                              <stop offset="0%" stopColor="#ffc107" />
+                              <stop offset="100%" stopColor="#ffc107" />
                               
                             </linearGradient>
                         </defs>
@@ -243,7 +243,7 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
             </ul>
           </div>
 
-          <div className={styles.download_cv_container} onMouseLeave={onMouseHandleHoverDownloadDiv} onMouseEnter={onMouseHandleHoverDownloadDiv} onClick={(e)=>window.open(`${process.env.NEXT_PUBLIC_URL}/rodrigocp_cv.pdf`)}>
+          <div className={styles.download_cv_container} onMouseLeave={onMouseHandleHoverDownloadDiv} onMouseEnter={onMouseHandleHoverDownloadDiv} onClick={(e)=>window.open(`/rodrigocp_cv.pdf`)}>
             <h6 className={styles.download_label}>DOWNLOAD CV </h6>
             <FaDownload className={styles.download_icon}/>
           </div>
