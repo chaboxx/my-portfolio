@@ -1,4 +1,4 @@
-import { DataMessage, SendMessageResponse } from "../interfaces/send-message-resp";
+import { DataMessage } from "../interfaces/send-message-resp";
 
 
 

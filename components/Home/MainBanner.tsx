@@ -50,7 +50,7 @@ export const MainBanner : FC = () => {
       </div>
       <div className={styles.image}>
 
-        <Image quality={100} src="/miFotoSinFondo.png" width="280px" height="390px"/>
+        <Image loading="eager" quality={100} src="/miFotoSinFondo.png" width="280px" height="390px"/>
       </div>
     </div>
   )

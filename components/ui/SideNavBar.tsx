@@ -138,7 +138,7 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
 
         <div className={styles.main_foto_container}>
           <div className={styles.image}>
-            <Image quality={100} src="/miFoto1_1.jpg" width="90px" height="90px"/>
+            <Image loading="eager" quality={100} src="/miFoto1_1.jpg" width="90px" height="90px"/>
             
           </div>
           <h3 className={styles.name}>Rodrigo Cueva Pastor</h3>
