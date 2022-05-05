@@ -73,7 +73,7 @@ export const ContactMain : FC = () => {
 
 
   return (
-    <div className={styles.contact_container}>
+    <div id="contact" className={styles.contact_container}>
         <h6 className={styles.title}>Get in touch</h6>
         <div className={styles.main_content}>
           <form id="form-enviar-mensaje" onSubmit={handleSendMessage}>

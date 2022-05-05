@@ -34,7 +34,6 @@ export const Layout :FC<Props> = ({children , title , description}) => {
         <title>{title}</title>
         <meta name='author' content='Rodrigo Cueva Pastor @chaboxxsama' />
         <meta name='description' content={description || "Portfolio Rodrigo Cueva Pastor Full Stack Developer"} />
-        <meta name="viewport" content="viewport-fit=cover" />
         <link rel="shortcut icon" href="/dev.ico" type="image/x-icon" />      
       </Head>
 

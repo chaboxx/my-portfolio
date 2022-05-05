@@ -46,7 +46,7 @@ export const MainBanner : FC = () => {
             </span>
           </p>
         </div>
-        <button className={styles.button}>EXPLORE NOW</button>
+        <button onClick={()=>document.querySelector("#contact")?.scrollIntoView()} className={styles.button}>CONTACT ME</button>
       </div>
       <div className={styles.image}>
 

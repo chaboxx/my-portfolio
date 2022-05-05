@@ -52,7 +52,7 @@ const proyectos = [
     image: "/my-portfolio.jpg",
     description: "My portfolio :).",
     githubLink : "https://github.com/chaboxx/my-portfolio",
-    link : "",
+    link : "https://rodrigocp.dev",
     tecnologies : [SiNextdotjs,FaReact ,SiTypescript],
   },
 ]
