@@ -5,8 +5,8 @@ import Image from "next/image";
 import styles from "../../styles/components/Home/MainBanner.module.css";
 
 
-const textosBanner = ["Web Aplications.","RESTful APIs.","User Experiences."]
-export const MainBanner : FC = () => {
+const textosBanner = ["Web Aplications.","RESTful APIs.","Microservices"]
+export const MainBanner : FC = () => {  
 
   const [textoBanner, setTextoBanner] = useState(textosBanner[0]);
   const [indexTextosBanner, setIndexTextosBanner] = useState(0);

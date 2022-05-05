@@ -1,13 +1,17 @@
 import React, { FC, useState } from 'react';
 import Image from 'next/image';
 
+import { nanoid } from 'nanoid';
+
 import { IconType } from 'react-icons';
-
-import { IoLogoJavascript } from "react-icons/io";
-
 import { GoMarkGithub } from "react-icons/go";
-
 import { BiLinkExternal } from "react-icons/bi";
+
+
+import { FaReact } from "react-icons/fa";
+import { DiNodejsSmall , DiMongodb} from "react-icons/di";
+import { SiExpress ,SiNextdotjs ,SiSocketdotio , SiPostgresql ,SiJavascript, SiTypescript} from "react-icons/si";
+import { GrDocker } from "react-icons/gr";
 
 import { Modal } from '../ui/Modal';
 import { useModal } from '../../hooks/useModal';
@@ -16,30 +20,40 @@ import styles from "../../styles/components/Home/ProyectsMain.module.css";
 
 const proyectos = [
   {
-    title:"HI-BABY ECOMMERCE",
+    id: nanoid(8),
+    title:"HI BABY ECOMMERCE",
     image: "/../public/HI-BABY.PNG",
-    description: "My job is simple and sophisticated, so it is possible to describe and simple, and flowery language. I love the…",
-    githubLink : "",
-    link : "",
-    tecnologies : [IoLogoJavascript,IoLogoJavascript,IoLogoJavascript,IoLogoJavascript],
+    description: "With only me in the development team was my firts experience , this webpage was created in the MERN stack.",
+    githubLink : "https://github.com/chaboxx/hibabyServidor",
+    link : "https://hi-baby-store.com",
+    tecnologies : [FaReact,DiNodejsSmall,DiMongodb,SiExpress],
   },
   {
-    title:"HI-BABY ECOMMERCE",
-    image: "/../public/HI-BABY.PNG",
-
-    description: "My job is simple and sophisticated, so it is possible to describe and simple, and flowery language. I love the…",
-    githubLink : "",
+    id: nanoid(8),
+    title:"Rappidin",
+    image: "/../public/rappidin.PNG",
+    description: "Working in this project... Food App , PWA , Delivery and Maps.",
+    githubLink : "https://github.com/chaboxx/Rappidin",
     link : "",
-    tecnologies : [IoLogoJavascript,IoLogoJavascript,IoLogoJavascript],
+    tecnologies : [SiNextdotjs,SiSocketdotio,SiPostgresql,GrDocker],
   },
   {
-    title:"HI-BABY ECOMMERCE",
-    image: "/../public/HI-BABY.PNG",
-
-    description: "My job is simple and sophisticated, so it is possible to describe and simple, and flowery language. I love the…",
-    githubLink : "",
+    id: nanoid(8),
+    title:"Clean-Data TIC",
+    image: "/../public/tic_clean_data.PNG",
+    description: "App for clean a archive .csv.",
+    githubLink : "https://github.com/chaboxx/T1C-CLEAN-DATA",
+    link : "https://t1c-ticx-clean-data.herokuapp.com/",
+    tecnologies : [SiJavascript,DiNodejsSmall,SiExpress],
+  },
+  {
+    id: nanoid(8),
+    title:"My Portfolio",
+    image: "/../public/my-portfolio.PNG",
+    description: "My portfolio :).",
+    githubLink : "https://github.com/chaboxx/my-portfolio",
     link : "",
-    tecnologies : [IoLogoJavascript,IoLogoJavascript],
+    tecnologies : [SiNextdotjs,FaReact ,SiTypescript],
   },
 ]
 
@@ -51,6 +65,7 @@ const renderElement = (render: IconType[] ,styles: React.CSSProperties) => {
     style:{
       ...styles
     },
+    key: nanoid(8),
   }))
 }
 
@@ -83,7 +98,7 @@ export const ProyectsMain : FC = () => {
       <div className={styles.content_container}>
         {
           proyectos.map(data=>(
-            <div className={styles.content_item}>
+            <div key={data.id} className={styles.content_item}>
               <div onClick={(e)=>openModalImage(e,data.image)} className={styles.image_container}>
                 <Image layout="responsive" src={data.image} width="100%" height="100%"/>
               </div>
@@ -96,10 +111,10 @@ export const ProyectsMain : FC = () => {
                   {
                     renderElement(data.tecnologies,{
                       color:"white",
-                      width:"55px",
-                      height:"55px",
+                      width:"45px",
+                      height:"45px",
                     }).map(element=>(
-                      <div className={styles.tecnologie_item}>
+                      <div key={element.key} className={styles.tecnologie_item}>
                         {element}
                       </div>
                     ))

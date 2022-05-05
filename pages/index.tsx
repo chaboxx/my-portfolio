@@ -34,12 +34,12 @@ const Home: NextPage = () => {
           
           <div className={styles.info_project_container}>
             <p className={styles.info_project_value}>2</p>
-            <p className={styles.info_project_label}>Company Reference</p>
+            <p className={styles.info_project_label}>Company References</p>
           </div>
           
           <div className={styles.info_project_container}>
             <p className={styles.info_project_value}>3 +</p>
-            <p className={styles.info_project_label}>Cerfificate</p>
+            <p className={styles.info_project_label}>Cerfificates</p>
           </div>
         </div>
         <SkillsMain />

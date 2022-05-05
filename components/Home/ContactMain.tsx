@@ -39,7 +39,7 @@ export const ContactMain : FC = () => {
     setDisabledInput(true);
     if ( !parametros[0] || !parametros[1] || !parametros[2]){
 
-      setMensajeRespuesta("Completa los campos porfavor...");
+      setMensajeRespuesta("Fill in the fields please...");
       
       setDisabledInput(false);
       return setError(true);

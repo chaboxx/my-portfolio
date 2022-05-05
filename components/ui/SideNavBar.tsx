@@ -18,10 +18,12 @@ interface Props {
 
 const lenguajes = [
   {
+    id : nanoid(8),
     nombre: "English",
     value : 0.750,
   },
   {
+    id : nanoid(8),
     nombre: "Spanish",
     value : 1,
   },
@@ -31,28 +33,38 @@ const lenguajes = [
 const coding = [
   {
     id : nanoid(8),
-    nombre: "html",
-    value : 0.90, 
+    nombre: "JS",
+    value : 0.95, 
+  },
+  {
+    id : nanoid(8),
+    nombre: "HTML",
+    value : 0.95, 
   },
   {
     id : nanoid(8),
     nombre: "CSS",
-    value : 0.25, 
-  },
-  {
-    id : nanoid(8),
-    nombre: "JS",
     value : 0.90, 
   },
   {
     id : nanoid(8),
-    nombre: "PHP",
-    value : 0.65, 
+    nombre: "NODEJS",
+    value : 0.90, 
   },
   {
     id : nanoid(8),
-    nombre: "WordPress",
-    value : 0.85, 
+    nombre: "REACT",
+    value : 0.90, 
+  },
+  {
+    id : nanoid(8),
+    nombre: "NEXTJS",
+    value : 0.80, 
+  },
+  {
+    id : nanoid(8),
+    nombre: "GIT",
+    value : 0.80, 
   },
   
   
@@ -143,12 +155,12 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
                 <p className={styles.value_info}>Perú</p>
               </li>
               <li className={styles.list_general_info_item}>
-                <p className={styles.label_info}>City:</p>
-                <p className={styles.value_info}>Lima</p>
+                <p className={styles.label_info}>Email:</p>
+                <p className={styles.value_info}>chaboxx159@gmail.com</p>
               </li>
               <li className={styles.list_general_info_item}>
-                <p className={styles.label_info}>Age:</p>
-                <p className={styles.value_info}>23</p>
+                <p className={styles.label_info}>Tel:</p>
+                <p className={styles.value_info}>+51 921497426</p>
               </li>
             </ul>
               
@@ -160,7 +172,7 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
               
               {
                 lenguajes.map((lenguaje,index)=>(
-                  <div className={styles.language}>
+                  <div key={lenguaje.id} className={styles.language}>
                     <div className={styles.canva_language}>
                       <svg className={styles.svg_circle} xmlns="http://www.w3.org/2000/svg" version="1.1" width="50px" height="50px">
                         <defs>
@@ -213,20 +225,20 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
             <ul className={styles.knowledge_list}>
               <li className={styles.knowledge_item}>
                 <BsCheckLg className={styles.check_icon}/>
-                <p className={styles.knowledge_value}>Bootstrap, Materialize</p>
+                <p className={styles.knowledge_value}>JWT, HOOKS , STATES</p>
               </li>
               <li className={styles.knowledge_item}>
                 <BsCheckLg className={styles.check_icon}/>
-                <p className={styles.knowledge_value}>Stylus, Sass, Less</p>
+                <p className={styles.knowledge_value}>CSS, BOOTSTRAP , SCSS</p>
               </li>
               <li className={styles.knowledge_item}>
                 <BsCheckLg className={styles.check_icon}/>
-                <p className={styles.knowledge_value}>Gulp, Webpack, Grunt</p>
+                <p className={styles.knowledge_value}>WEBPACK , VITE</p>
               </li>
 
               <li className={styles.knowledge_item}>
                 <BsCheckLg className={styles.check_icon}/>
-                <p className={styles.knowledge_value}>GIT knowledge</p>
+                <p className={styles.knowledge_value}>GIT , GITHUB</p>
               </li>
             </ul>
           </div>

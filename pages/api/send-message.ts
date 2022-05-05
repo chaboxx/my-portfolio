@@ -61,14 +61,14 @@ export default async function handler(req: NextApiRequest,res: NextApiResponse<D
 
     return res.status(200).json({
         ok:true,
-        msg :"Mensaje Enviado. Si no puedes esperar puedes llamarme :) => +51 921497426",
+        msg :"Message sent. If you can't wait you can call me => +51 921497426",
     })
 
 } catch (error) {
     console.log(error);
     return res.status(500).json({
         ok: false,
-        msg: "Ocurrio un error inesperado , intente de nuevo porfavor.", 
+        msg: "An unexpected error occurred, please try again.", 
     })
 }
 

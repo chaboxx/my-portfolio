@@ -49,9 +49,7 @@ const skills = [
   {
     id: nanoid(8),
     skill: "NEXT JS",
-    description : `Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit. Delectus esse commodi deserunt vitae, 
-    vero quasi! Veniam quaerat tenetur pariatur doloribus.`,
+    description : "I have Knowledge in SSR, ISR, CEO. This website was created with NextJs.",
     image:"/../public/nextjs.png",
     tecnology_link: "https://nextjs.org/",
 
@@ -60,20 +58,16 @@ const skills = [
   {
     id: nanoid(8),
     skill: "TYPESCRIPT",
-    description : `Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit. Delectus esse commodi deserunt vitae, 
-    vero quasi! Veniam quaerat tenetur pariatur doloribus.`,
+    description : "Working with typescript since 2021. React + Ts , NextJs + Ts .",
     image:"/../public/typescript.png",
-    tecnology_link: "https://www.typescriptlang.org/d",
+    tecnology_link: "https://www.typescriptlang.org/",
 
   }
   ,
   {
     id: nanoid(8),
     skill: "DOCKER",
-    description : `Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit. Delectus esse commodi deserunt vitae, 
-    vero quasi! Veniam quaerat tenetur pariatur doloribus.`,
+    description : "Knowledge of docker in the generation of images and deploy to main cloud providers.",
     image:"/../public/docker.png",
     tecnology_link: "https://www.docker.com/sq",
 
@@ -81,21 +75,8 @@ const skills = [
   ,
   {
     id: nanoid(8),
-    skill: "SQL",
-    description : `Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit. Delectus esse commodi deserunt vitae, 
-    vero quasi! Veniam quaerat tenetur pariatur doloribus.`,
-    image:"/../public/sql.png",
-    tecnology_link: "https://www.google.com/search?q=sql",
-
-  }
-  ,
-  {
-    id: nanoid(8),
     skill: "K8S",
-    description : `Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit. Delectus esse commodi deserunt vitae, 
-    vero quasi! Veniam quaerat tenetur pariatur doloribus.`,
+    description : "Knowlodge of load balancers, scaling and performance.",
     image:"/../public/k8s.png",
     tecnology_link: "https://kubernetes.io/",
 
@@ -103,10 +84,17 @@ const skills = [
   ,
   {
     id: nanoid(8),
+    skill: "SQL",
+    description : "PostgreSQL , MYSQL.",
+    image:"/../public/sql.png",
+    tecnology_link: "https://www.google.com/search?q=sql",
+
+  }
+  ,
+  {
+    id: nanoid(8),
     skill: "MICROSERVICES",
-    description : `Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit. Delectus esse commodi deserunt vitae, 
-    vero quasi! Veniam quaerat tenetur pariatur doloribus.`,
+    description : "Creation of microservices with NodeJS.",
     image:"/../public/microservices.png",
     tecnology_link: "https://www.google.com/search?q=MICROSERVICES",
 
@@ -115,9 +103,7 @@ const skills = [
   {
     id: nanoid(8),
     skill: "Express",
-    description : `Lorem ipsum dolor sit amet,
-    consectetur adipisicing elit. Delectus esse commodi deserunt vitae, 
-    vero quasi! Veniam quaerat tenetur pariatur doloribus.`,
+    description : "Working with ExpressJs since 2020 , security and fast-development.",
     image:"/../public/express.png",
     tecnology_link: "https://expressjs.com/",
 
