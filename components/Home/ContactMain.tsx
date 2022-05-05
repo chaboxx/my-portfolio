@@ -32,6 +32,7 @@ export const ContactMain : FC = () => {
     }
 
   }
+  const { sendMessage } =  useApi("/send-message");
 
   const handleSendMessage = async ( e :React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -45,7 +46,6 @@ export const ContactMain : FC = () => {
       return setError(true);
     }
     
-    const { sendMessage } =  useApi("/send-message");
     const { ok , msg } = await sendMessage({
       nombre : parametros[0],
       email :parametros[1],

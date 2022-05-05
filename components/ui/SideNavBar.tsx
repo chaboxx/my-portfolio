@@ -177,12 +177,12 @@ export const SideNavBar : FC<Props> = ({isOpen}) => {
                       <svg className={styles.svg_circle} xmlns="http://www.w3.org/2000/svg" version="1.1" width="50px" height="50px">
                         <defs>
                             <linearGradient id="GradientColor">
-                              <stop offset="0%" stop-color="#ffc107" />
-                              <stop offset="100%" stop-color="#ffc107" />
+                              <stop offset="0%" stopColor="ffc107" />
+                              <stop offset="100%" stopColor="ffc107" />
                               
                             </linearGradient>
                         </defs>
-                        <circle ref={(ref)=>captureLanguageRefs(ref,lenguaje.value)} className={styles.circle_points} cx="50%" cy="50%" r="22px" stroke-linecap="round" />
+                        <circle ref={(ref)=>captureLanguageRefs(ref,lenguaje.value)} className={styles.circle_points} cx="50%" cy="50%" r="22px" strokeLinecap="round" />
                       </svg>
                       <p>{`${(lenguaje.value*100)}%`}</p>
                     </div>

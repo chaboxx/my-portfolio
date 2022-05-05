@@ -12,7 +12,7 @@ export const MainBanner : FC = () => {
   const [indexTextosBanner, setIndexTextosBanner] = useState(0);
   useEffect(() => {
     setIndexTextosBanner(indexTextosBanner+1);
-  }, [])
+  }, [indexTextosBanner])
   
   const cambiarTextoBanner = (event : React.AnimationEvent<HTMLSpanElement>) => {
 
