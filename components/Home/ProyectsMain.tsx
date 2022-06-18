@@ -25,7 +25,7 @@ const proyectos = [
     image: "/HI-BABY.jpg",
     description: "With only me in the development team was my firts experience , this webpage was created in the MERN stack.",
     githubLink : "https://github.com/chaboxx/hibabyServidor",
-    link : "https://hi-baby-store.com",
+    link : "https://hi-baby-store-peru.herokuapp.com/",
     tecnologies : [FaReact,DiNodejsSmall,DiMongodb,SiExpress],
   },
   {
